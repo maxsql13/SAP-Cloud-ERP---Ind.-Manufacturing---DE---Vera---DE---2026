@@ -207,6 +207,21 @@
             border-color: transparent;
         }
         .value-card:hover::before { opacity: 1; }
+
+        /* Partner reference cards */
+        .partner-card {
+            text-decoration: none !important;
+            color: inherit !important;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .partner-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(0, 112, 242, 0.1);
+            border-color: transparent;
+        }
+
         .value-icon {
             width: 52px; height: 52px; background: #E1F4FF;
             border-radius: 12px; display: flex; align-items: center;
@@ -619,14 +634,6 @@
 
 
         
-        /* Partner cards responsive */
-        @media (max-width: 1024px) {
-            #partner-referenzen > div > div:last-child { grid-template-columns: repeat(2, 1fr) !important; }
-        }
-        @media (max-width: 768px) {
-            #partner-referenzen > div > div:last-child { grid-template-columns: 1fr !important; }
-        }
-
         /* ==================== WIDESCREEN (>1600px) ==================== */
         @media (min-width: 1601px) {
             .hero { padding: 80px 80px !important; }
@@ -954,87 +961,73 @@
     <!-- Contact / CTA Section with Vera Teuscher -->
     
     <!-- Partner References Section -->
-    <section class="section" id="partner-referenzen" style="background: #F7F8FA; padding: 80px 40px;">
-        <div style="max-width: 1300px; margin: 0 auto;">
-            <div style="text-align: center; margin-bottom: 56px;">
-                <h2 style="font-size: 36px; font-weight: 700; color: #000000; margin-bottom: 12px;">Weitere Erfolgsgeschichten</h2>
-                <p style="font-size: 18px; color: #666666; max-width: 700px; margin: 0 auto;">Mittelständische Fertigungsunternehmen aus der Schweiz und international, die mit SAP Cloud ERP ihre Zukunft gestalten.</p>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; align-items: stretch;">
-                
-                <!-- Card 1: BT-Hydraulik -->
-                <a href="https://dam.sap.com/mac/app/p/pdf/asset/preview/TrNH7iQ?ltr=a&rc=128&doi=SAP943110" target="_blank" style="text-decoration: none; color: inherit; display: flex;">
-                    <div style="background: #FFFFFF; border-radius: 16px; padding: 36px 28px; border: 1px solid #EAECEE; transition: all 0.3s; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; flex: 1;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,112,242,0.1)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
-                        <div>
-                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-                                <div style="width: 44px; height: 44px; background: #E1F4FF; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                                    <svg width="22" height="22" fill="none" stroke="#0070F2" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                                </div>
-                                <div>
-                                    <div style="font-size: 16px; font-weight: 700; color: #000000;">BT-Hydraulik AG</div>
-                                    <div style="font-size: 13px; color: #666666;">Bern, Schweiz &middot; ~20 Mitarbeitende</div>
-                                </div>
-                            </div>
-                            <div style="font-size: 14px; color: #0070F2; font-weight: 500; margin-bottom: 12px; letter-spacing: 0.3px;">Hydrauliklösungen &middot; Fertigung</div>
-                            <p style="font-size: 15px; color: #444444; line-height: 1.7; margin-bottom: 20px; font-style: italic;">&laquo;Wir sind nun frischer aufgestellt, wettbewerbsfähiger und haben die Basis gelegt, um uns weiterzuentwickeln &#8211; technologisch und als Unternehmen.&raquo;</p>
-                            <p style="font-size: 13px; color: #666666; font-weight: 500; margin-bottom: 16px;">Beat Liechti, CEO</p>
-                        </div>
-                        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto;">
-                            <span style="font-size: 12px; background: #E1F4FF; color: #0070F2; padding: 4px 10px; border-radius: 20px; font-weight: 500;">6 Monate Einführung</span>
-                            <span style="font-size: 12px; background: #E1F4FF; color: #0070F2; padding: 4px 10px; border-radius: 20px; font-weight: 500;">1 Tag/Woche gespart</span>
-                        </div>
+    <section class="section section-light" id="partner-referenzen">
+        <div class="section-header">
+            <h2>Weitere Erfolgsgeschichten</h2>
+            <p>Mittelständische Fertigungsunternehmen aus der Schweiz und international, die mit SAP Cloud ERP ihre Zukunft gestalten.</p>
+        </div>
+        <div class="value-grid">
+            
+            <!-- Card 1: BT-Hydraulik -->
+            <a href="https://dam.sap.com/mac/app/p/pdf/asset/preview/TrNH7iQ?ltr=a&rc=128&doi=SAP943110" target="_blank" class="value-card partner-card">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                    <div class="value-icon">
+                        <svg width="24" height="24" fill="none" stroke="#0070F2" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                     </div>
-                </a>
-
-                <!-- Card 2: KWC Group -->
-                <a href="https://www.sap.com/swiss/documents/2026/02/2e80106f-3e7f-0010-bca6-c68f7e60039b.html" target="_blank" style="text-decoration: none; color: inherit; display: flex;">
-                    <div style="background: #FFFFFF; border-radius: 16px; padding: 36px 28px; border: 1px solid #EAECEE; transition: all 0.3s; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; flex: 1;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,112,242,0.1)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
-                        <div>
-                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-                                <div style="width: 44px; height: 44px; background: #E1F4FF; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                                    <svg width="22" height="22" fill="none" stroke="#0070F2" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                                </div>
-                                <div>
-                                    <div style="font-size: 16px; font-weight: 700; color: #000000;">KWC Group AG</div>
-                                    <div style="font-size: 13px; color: #666666;">Unterkulm, Schweiz &middot; 300 Mitarbeitende</div>
-                                </div>
-                            </div>
-                            <div style="font-size: 14px; color: #0070F2; font-weight: 500; margin-bottom: 12px; letter-spacing: 0.3px;">Sanitärtechnik &middot; 9 Standorte weltweit</div>
-                            <p style="font-size: 15px; color: #444444; line-height: 1.7; margin-bottom: 20px; font-style: italic;">&laquo;Wir senken unsere Kosten und verbessern gleichzeitig die Qualität unserer Produkte.&raquo;</p>
-                            <p style="font-size: 13px; color: #666666; font-weight: 500; margin-bottom: 16px;">Menno Vlietstra, Group Head IT</p>
-                        </div>
-                        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto;">
-                            <span style="font-size: 12px; background: #E1F4FF; color: #0070F2; padding: 4px 10px; border-radius: 20px; font-weight: 500;">Globaler Rollout</span>
-                            <span style="font-size: 12px; background: #E1F4FF; color: #0070F2; padding: 4px 10px; border-radius: 20px; font-weight: 500;">Kürzere Durchlaufzeiten</span>
-                        </div>
+                    <div>
+                        <div style="font-size: 16px; font-weight: 700; color: #000000;">BT-Hydraulik AG</div>
+                        <div style="font-size: 13px; color: #666666;">Bern, Schweiz &middot; ~20 Mitarbeitende</div>
                     </div>
-                </a>
+                </div>
+                <div style="font-size: 13px; color: #0070F2; font-weight: 500; margin-bottom: 14px; letter-spacing: 0.3px;">Hydrauliklösungen &middot; Fertigung</div>
+                <p style="font-size: 15px; color: #444444; line-height: 1.7; margin-bottom: 16px; font-style: italic;">&laquo;Wir sind nun frischer aufgestellt, wettbewerbsfähiger und haben die Basis gelegt, um uns weiterzuentwickeln &#8211; technologisch und als Unternehmen.&raquo;</p>
+                <p style="font-size: 13px; color: #666666; font-weight: 500; margin-bottom: 20px;">Beat Liechti, CEO</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto;">
+                    <span style="font-size: 12px; background: #E1F4FF; color: #0070F2; padding: 4px 10px; border-radius: 20px; font-weight: 500;">6 Monate Einführung</span>
+                    <span style="font-size: 12px; background: #E1F4FF; color: #0070F2; padding: 4px 10px; border-radius: 20px; font-weight: 500;">1 Tag/Woche gespart</span>
+                </div>
+            </a>
 
-                <!-- Card 3: GROW with SAP - Multiple References -->
-                <a href="https://www.sap.com/swiss/documents/2024/06/b26d4af0-c67e-0010-bca6-c68f7e60039b.html" target="_blank" style="text-decoration: none; color: inherit; display: flex;">
-                    <div style="background: #FFFFFF; border-radius: 16px; padding: 36px 28px; border: 1px solid #EAECEE; transition: all 0.3s; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; flex: 1;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,112,242,0.1)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
-                        <div>
-                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-                                <div style="width: 44px; height: 44px; background: #E1F4FF; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                                    <svg width="22" height="22" fill="none" stroke="#0070F2" stroke-width="1.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-                                </div>
-                                <div>
-                                    <div style="font-size: 16px; font-weight: 700; color: #000000;">Weitere Referenzen</div>
-                                    <div style="font-size: 13px; color: #666666;">Komax, SABO, Briggs u.a.</div>
-                                </div>
-                            </div>
-                            <div style="font-size: 14px; color: #0070F2; font-weight: 500; margin-bottom: 12px; letter-spacing: 0.3px;">Industrielle Fertigung &middot; International</div>
-                            <p style="font-size: 15px; color: #444444; line-height: 1.7; margin-bottom: 20px;">Mittelständische Fertigungsunternehmen weltweit &#8211; von Maschinenbau bis Verpackungstechnik &#8211; setzen auf SAP Cloud ERP als Wachstumsplattform.</p>
-                            <p style="font-size: 13px; color: #666666; font-weight: 500; margin-bottom: 16px;">Sammlung von Erfolgsgeschichten</p>
-                        </div>
-                        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto;">
-                            <span style="font-size: 12px; background: #E1F4FF; color: #0070F2; padding: 4px 10px; border-radius: 20px; font-weight: 500;">10 Wochen Go-Live</span>
-                            <span style="font-size: 12px; background: #E1F4FF; color: #0070F2; padding: 4px 10px; border-radius: 20px; font-weight: 500;">1 ERP statt 10</span>
-                        </div>
+            <!-- Card 2: KWC Group -->
+            <a href="https://www.sap.com/swiss/documents/2026/02/2e80106f-3e7f-0010-bca6-c68f7e60039b.html" target="_blank" class="value-card partner-card">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                    <div class="value-icon">
+                        <svg width="24" height="24" fill="none" stroke="#0070F2" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                     </div>
-                </a>
+                    <div>
+                        <div style="font-size: 16px; font-weight: 700; color: #000000;">KWC Group AG</div>
+                        <div style="font-size: 13px; color: #666666;">Unterkulm, Schweiz &middot; 300 Mitarbeitende</div>
+                    </div>
+                </div>
+                <div style="font-size: 13px; color: #0070F2; font-weight: 500; margin-bottom: 14px; letter-spacing: 0.3px;">Sanitärtechnik &middot; 9 Standorte weltweit</div>
+                <p style="font-size: 15px; color: #444444; line-height: 1.7; margin-bottom: 16px; font-style: italic;">&laquo;Wir senken unsere Kosten und verbessern gleichzeitig die Qualität unserer Produkte.&raquo;</p>
+                <p style="font-size: 13px; color: #666666; font-weight: 500; margin-bottom: 20px;">Menno Vlietstra, Group Head IT</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto;">
+                    <span style="font-size: 12px; background: #E1F4FF; color: #0070F2; padding: 4px 10px; border-radius: 20px; font-weight: 500;">Globaler Rollout</span>
+                    <span style="font-size: 12px; background: #E1F4FF; color: #0070F2; padding: 4px 10px; border-radius: 20px; font-weight: 500;">Kürzere Durchlaufzeiten</span>
+                </div>
+            </a>
 
-            </div>
+            <!-- Card 3: GROW with SAP - Multiple References -->
+            <a href="https://www.sap.com/swiss/documents/2024/06/b26d4af0-c67e-0010-bca6-c68f7e60039b.html" target="_blank" class="value-card partner-card">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                    <div class="value-icon">
+                        <svg width="24" height="24" fill="none" stroke="#0070F2" stroke-width="1.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                    </div>
+                    <div>
+                        <div style="font-size: 16px; font-weight: 700; color: #000000;">Weitere Referenzen</div>
+                        <div style="font-size: 13px; color: #666666;">Komax, SABO, Briggs u.a.</div>
+                    </div>
+                </div>
+                <div style="font-size: 13px; color: #0070F2; font-weight: 500; margin-bottom: 14px; letter-spacing: 0.3px;">Industrielle Fertigung &middot; International</div>
+                <p style="font-size: 15px; color: #444444; line-height: 1.7; margin-bottom: 16px;">Mittelständische Fertigungsunternehmen weltweit &#8211; von Maschinenbau bis Verpackungstechnik &#8211; setzen auf SAP Cloud ERP als Wachstumsplattform.</p>
+                <p style="font-size: 13px; color: #666666; font-weight: 500; margin-bottom: 20px;">Sammlung von Erfolgsgeschichten</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto;">
+                    <span style="font-size: 12px; background: #E1F4FF; color: #0070F2; padding: 4px 10px; border-radius: 20px; font-weight: 500;">10 Wochen Go-Live</span>
+                    <span style="font-size: 12px; background: #E1F4FF; color: #0070F2; padding: 4px 10px; border-radius: 20px; font-weight: 500;">1 ERP statt 10</span>
+                </div>
+            </a>
+
         </div>
     </section>
 
